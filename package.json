@@ -1,0 +1,27 @@
+{
+  "name": "test-html2svg",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@tiptap/extension-character-count": "^2.1.7",
+    "@tiptap/extension-link": "^2.1.7",
+    "@tiptap/extension-placeholder": "^2.1.7",
+    "@tiptap/pm": "^2.1.7",
+    "@tiptap/starter-kit": "^2.1.7",
+    "@tiptap/vue-3": "^2.1.7",
+    "canvg": "^4.0.1",
+    "html2canvas": "^1.4.1",
+    "vue": "^3.3.4",
+    "vue-router": "^4.2.4"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.3.1",
+    "sass": "^1.66.1",
+    "vite": "^4.4.9"
+  }
+}

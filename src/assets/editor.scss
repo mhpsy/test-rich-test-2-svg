@@ -1,0 +1,135 @@
+
+.ty-editor.ProseMirror {
+  margin-right: 1px;
+  padding: 6px 12px;
+  //margin-top: 24px;
+  border: 1px solid #000;
+  border-radius: 4px;
+  min-height: 70px;
+  max-height: 240px;
+  overflow: auto;
+
+  p {
+    color: #000000;
+    line-height: 18px;
+  }
+
+  > * + * {
+    margin-top: 0.75em;
+  }
+
+  a {
+    color: #565cd7;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  em {
+    color: #000000;
+    font-style: italic;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    line-height: 1.1;
+  }
+
+  code {
+    background-color: rgba(#616161, 0.1);
+    color: #616161;
+  }
+
+  pre {
+    background: #0d0d0d;
+    color: #fff;
+    font-family: "JetBrainsMono", monospace;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+
+    code {
+      color: inherit;
+      padding: 0;
+      background: none;
+      font-size: 0.8rem;
+    }
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  blockquote {
+    padding-left: 1rem;
+    border-left: 2px solid rgba(#0d0d0d, 0.1);
+  }
+
+  hr {
+    border: none;
+    border-top: 2px solid rgba(#0d0d0d, 0.1);
+    margin: 2rem 0;
+  }
+
+  @counter-style zfx {
+    system: fixed;
+    symbols: □;
+    suffix: " ";
+  }
+  @counter-style lx {
+    system: fixed;
+    symbols: ◊;
+    suffix: " ";
+  }
+
+  ul {
+    list-style: disc;
+
+    ul {
+      list-style: circle;
+
+      ul {
+        list-style: zfx;
+
+        ul {
+          list-style: disclosure-open;
+
+          ul {
+            list-style: lx;
+          }
+        }
+      }
+    }
+  }
+
+  li {
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
+    margin-left: 1rem;
+  }
+
+  ol {
+    list-style: none;
+    counter-reset: section;
+
+    li {
+      counter-increment: section;
+    }
+
+    li > p::before {
+      line-height: 30px;
+      display: inline-block;
+      content: counters(section, ".") ".";
+      font-weight: bold;
+      margin-right: 0.2em;
+      margin-left: -1.1em;
+    }
+  }
+
+  strong {
+    font-weight: 800;
+  }
+}
